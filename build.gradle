@@ -3,7 +3,7 @@ ext.configFile = file('build.properties')
 configFile.withReader {
 	def prop = new Properties()
 	prop.load(it)
-	project.ext.config = new ConfigSlurper().parse(group)
+	project.ext.config = new ConfigSlurper().parse(prop)
 }
 
 // Buildscript
